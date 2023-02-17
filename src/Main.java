@@ -1,15 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        List<String> words = new ArrayList<>();
-        String word = "yourapp the quick brown fox jumps over the lazy dog";
-        String[] split = word.split(" ");
-        for (String w : split) {
-            words.add(w);
-        }
-        System.out.println(words);
+        WordService count = new WordService(scan());
+        count.printResult();
+    }
+
+    public static String scan() {
+        System.out.println("Введите строку: ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
 }
+
+
+
+
+
+
+
+
